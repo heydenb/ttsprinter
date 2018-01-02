@@ -81,7 +81,12 @@ public class InvoiceData implements JRDataSource{
 			//Keep the date for what it is.
 		}
 		if (!StringUtils.isEmpty((String)data.get("BTWNUMMER"))){
-			data.put("BTWNUMMER", "BE 0"+(String)data.get("BTWNUMMER"));
+			if ("BE-".equals((String)data.get("BTWNUMMER"))){
+				data.put("BTWNUMMER", "");
+			}
+			else{
+				data.put("BTWNUMMER", ((String)data.get("BTWNUMMER")).replace("BE-", "BE 0"));
+			}
 		}
 		convertPropToDouble("BTWBASIS1");
 		convertPropToDouble("BTWBASIS2");

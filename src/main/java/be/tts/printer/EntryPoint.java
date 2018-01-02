@@ -6,8 +6,9 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 /**
+ * This is the starting class containing the main method
+ * 
  * @author heydenb
- *
  */
 public class EntryPoint {
 

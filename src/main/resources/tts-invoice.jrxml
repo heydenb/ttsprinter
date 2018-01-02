@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2018-01-02T11:01:06 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tts-invoice" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="2a94915c-5df5-4752-a2df-30371a7dd06c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TTSPRINTER_DATAADAPTER.xml"/>
+	<parameter name="AANSPREEK" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="NAAM" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="ADRES" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="POSTNUMMER" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="PLAATS" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="BTWNUMMER" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="FACTNR" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="FACTDATUM" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="WOSJN" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="WOSTEKST1" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="WOSTEKST2" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="BTWTARIEF1" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="BTWTARIEF2" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="BTWBASIS1" class="java.lang.Double">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="BTWBASIS2" class="java.lang.Double">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="BTWBEDRAG1" class="java.lang.Double">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="BTWBEDRAG2" class="java.lang.Double">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="FACTUURBEDRAG" class="java.lang.Double">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="VALUTA" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="AANSPREEK_NAAM" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="REGELNRx" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OMSCHRIJVINGx" class="java.lang.String"/>
+	<field name="ITEMBEDRAG1x" class="java.lang.Double"/>
+	<field name="ITEMBEDRAG2x" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="167" splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="250" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<image>
+				<reportElement x="14" y="-2" width="139" height="89" uuid="310f3161-8065-4367-b14f-268916675ac0"/>
+				<imageExpression><![CDATA["ttslogo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="201" y="12" width="314" height="24" uuid="ccf1c5c7-4799-4e2b-93e4-86fcc6d5ed36"/>
+				<textElement markup="styled">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tuin- en tuinbouwservice bvba]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="36" width="118" height="16" uuid="c8da878d-9189-4c2f-9985-a008413baa81">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bouwenstraat 65]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="36" width="80" height="16" uuid="46e832e6-4040-466e-af5c-c217b478d823"/>
+				<textElement markup="styled">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2547 Lint]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="91" width="56" height="14" uuid="84761517-9a58-41d1-9626-b4b2b285296a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<text><![CDATA[Aan:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="92" width="170" height="16" uuid="0783068b-058a-487a-a300-3dcbc0f3494a"/>
+				<textFieldExpression><![CDATA[$P{AANSPREEK_NAAM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="112" width="170" height="16" uuid="71e9d62b-e3b4-44fc-9aa5-29d5b8ed2bdb">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$P{ADRES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="132" width="56" height="16" uuid="0a18f0b8-52ac-41b3-bcd1-d5dc34f5b030">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$P{POSTNUMMER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="132" width="112" height="16" uuid="833b1ec3-6bdc-4615-8757-ec372f5acb0e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$P{PLAATS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="98" width="58" height="96" uuid="ff152bb9-929b-45b9-8622-87e40605f17a"/>
+				<textElement>
+					<paragraph lineSpacing="Fixed" lineSpacingSize="11.0"/>
+				</textElement>
+				<text><![CDATA[Tel:
+Fax:
+Email:
+B.T.W. nr:
+RPR.
+IBAN
+BIC
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="98" width="140" height="96" uuid="4cda26e3-c6c4-4721-9aa5-3ef946c57ef4"/>
+				<textElement>
+					<paragraph lineSpacing="Fixed" lineSpacingSize="11.0"/>
+				</textElement>
+				<text><![CDATA[0472/70 26 15
+03/455 43 81
+leo.vdheyden@telenet.be
+BE 0431.424.524
+Antwerpen
+BE74 7331 2508 8907
+KREDBEBB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="207" width="140" height="12" uuid="339969af-432d-4d74-be1c-bf90d643faab"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[te vermelden bij betaling]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="83" y="220" width="140" height="14" uuid="ae0fcf29-042e-4e55-a624-845174de4271"/>
+				<textFieldExpression><![CDATA[$P{FACTNR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="254" y="221" width="56" height="14" uuid="ed04c37c-95b2-4d9c-8aa4-40ac21b7eeb0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<text><![CDATA[Datum]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="309" y="202" width="170" height="14" uuid="ce18df03-5ed2-48a4-bf4b-d52d4f071146">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$P{BTWNUMMER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="254" y="202" width="56" height="14" uuid="3c131af3-a1b1-4aac-975c-ae7ffb7d95b1">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<text><![CDATA[B.T.W. nr]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="309" y="221" width="172" height="14" uuid="77bd99d7-71a3-44a6-b63d-d79433b008b5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$P{FACTDATUM}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="160" y="0" width="380" height="1" uuid="5d0b45a8-273a-4f51-9ce1-93f38f9ce210">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="540" y="0" width="1" height="250" uuid="bac39bc1-6448-438d-861c-b2b9c88098d3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="25" y="220" width="58" height="14" uuid="ac8bc24d-b578-4732-bad0-d702e8635743"/>
+				<text><![CDATA[Faktuur nr]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="79" width="1" height="171" uuid="2bed9d0e-a96f-4041-8d8a-85ce9e96e831">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="160" y="0" width="80" height="15" uuid="295382d4-2487-4edc-a370-6539b6df9f07">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[omschrijving]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="376" y="0" width="56" height="15" uuid="43d819b5-de8d-4401-a3b9-19dcfdebf696">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BTW: 6%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="0" width="60" height="15" uuid="b8dd51f2-878d-4277-8c4d-422710186f2f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BTW: 21%]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="0" width="1" height="30" uuid="4049d1fc-fa24-488b-b15f-5b882258814f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="540" y="0" width="1" height="30" uuid="ac4aed23-6e26-4acd-ba6e-4e103d36b19c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="20" y="20" width="505" height="1" uuid="c9588aa1-ee19-49a0-9ca9-8743968a0b2d"/>
+			</line>
+			<line>
+				<reportElement x="450" y="0" width="1" height="30" uuid="9ac6f592-ace9-46be-ad8e-e569e6dcb6aa">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="359" y="0" width="1" height="30" uuid="5ce46f1e-e931-40fc-9833-92ae6ccb7c6d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="30" y="1" width="322" height="15" uuid="bd0af8e0-3671-4b2a-94e5-c793aa55d056">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{OMSCHRIJVINGx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00 €" isBlankWhenNull="true">
+				<reportElement x="365" y="1" width="75" height="15" uuid="b131113c-e2c5-43fc-9209-b3876e0f3019">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{ITEMBEDRAG1x}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00 €" isBlankWhenNull="true">
+				<reportElement x="455" y="1" width="75" height="15" uuid="3c371527-505d-4df5-851c-f42a3dae65a5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{ITEMBEDRAG2x}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="10" y="0" width="1" height="23" uuid="f0c5c492-d8c1-4a30-884c-19c36a7a2b89">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="540" y="0" width="1" height="23" uuid="3cae4904-750f-41f3-80d3-5ff35c9a4d50">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="450" y="0" width="1" height="23" uuid="8194cf9f-d626-47f4-9975-f6d2ffe7ebb5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="359" y="0" width="1" height="23" uuid="4c2daa61-e43f-438f-bff9-a2515bcb406d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="64" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="278" y="6" width="74" height="15" uuid="02dd619e-7e54-4164-94d2-917d9cf870f7">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[totaal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="23" width="100" height="15" uuid="d4593785-f2f9-4a6e-b7da-cbe8c028c3af">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[B.T.W.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="44" width="100" height="15" uuid="067cdf4b-958b-4d10-b2aa-d4063c7c9d89">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[te betalen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="12" width="144" height="30" uuid="8139eb8b-e2ec-420a-a1e3-43cc931a1614">
+					<printWhenExpression><![CDATA[$P{WOSJN}.equals("J")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[W.O.S.  KB. nr 1; Art. 20
+BTW VERLEGD]]></text>
+			</staticText>
+			<textField pattern="#,##0.00 €" isBlankWhenNull="true">
+				<reportElement x="365" y="6" width="75" height="15" uuid="3f67a63e-64d9-4d1c-b04c-f63c4716aa09">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{BTWBASIS1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00 €" isBlankWhenNull="true">
+				<reportElement x="455" y="6" width="75" height="15" uuid="dbeba005-9b64-4560-86a5-a9baf278fd36">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{BTWBASIS2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00 €" isBlankWhenNull="true">
+				<reportElement x="365" y="23" width="75" height="15" uuid="f988f600-5c1f-4aa7-bf50-231dd0d1a51a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{BTWBEDRAG1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00 €" isBlankWhenNull="true">
+				<reportElement x="455" y="23" width="75" height="15" uuid="2f33e65b-dc5e-4fc6-97b3-60b9ed21fa31">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{BTWBEDRAG2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00 €" isBlankWhenNull="true">
+				<reportElement x="402" y="44" width="102" height="15" uuid="3f2e70d4-a6b5-44df-b00e-50ce65f7656c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{FACTUURBEDRAG}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="540" y="0" width="1" height="55" uuid="eff3a936-8b4f-4e36-a70b-e22946a3b882">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="10" y="0" width="1" height="55" uuid="3839b823-d8b7-48b8-9a9b-cfc530379010">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="450" y="0" width="1" height="40" uuid="e9a83523-775c-4ad8-ba07-5e82a01fa107">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="359" y="0" width="1" height="55" uuid="7fbd9cf9-fe5c-4fe9-a4db-a8ae83800568">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="385" y="39" width="142" height="1" uuid="092a49ae-df1b-41e0-a460-b569a7e62cd6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="385" y="3" width="142" height="1" uuid="d078ba7b-8dfa-4125-8110-a10a3a80bccb">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="369" y="61" width="158" height="1" uuid="b3b70ad7-1ec3-475a-af08-919ef23cefcd">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="369" y="63" width="158" height="1" uuid="ae0db879-1551-424d-853f-b5f2d7a3ba86">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="172" splitType="Stretch">
+			<image>
+				<reportElement x="11" y="-5" width="179" height="160" uuid="9dd488c4-0a99-4c48-ab38-9371abea417e"/>
+				<imageExpression><![CDATA["ttsboom2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="213" y="33" width="302" height="96" uuid="3c1fd6b1-7177-4310-9d0f-8ce0b69d351c"/>
+				<textElement textAlignment="Justified">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Al onze fakturen zijn betaalbaar CONTANT te Lint. Alle rekeningen niet geregeld binnen de maand na opsteldatum geven recht, zonder verdere verwittiging op 12% intrest ' jaars. Voor alle geschillen is alleen de Handelsrechtbank van Antwerpen bevoegd. Alle inningskosten van onbetaald gebleven rekeningen komen ten laste van de schuldenaar. Bij niet-betaling van onze fakturen, rekeningen of wissels op de gestelde datum of minstens acht dagen na verzending van een aanmaning, zal het bedrag ervan ten titel van forfaitaire en onveranderlijke schadevergoeding, verhoogd worden met 10% met minimum van 12.5€, dit onverminderd de gedingskosten en intresten. Onze klanten-medecontractanten zijn gehouden en verondersteld deze voorwaarden te kennen en te hebben aanvaard.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="154" y="150" width="213" height="1" uuid="11467b41-2c93-42aa-ae98-18c298a6447e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="540" y="-93" width="1" height="260" uuid="24a18d82-f1eb-473b-804f-e3307174c8fd">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="45" y="153" width="334" height="14" uuid="fe22af40-9c70-412f-be4e-d1d7e769a845"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[IBAN: BE74 7331 2508 8907  BIC: KREDBEBB   B.T.W. nr 0431.424.524/02.08.11]]></text>
+			</staticText>
+			<line>
+				<reportElement x="367" y="166" width="173" height="1" uuid="f4936eac-1a0d-46f0-8ed5-588c4fb699b8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="10" y="-118" width="1" height="128" uuid="a9764430-ed80-42ef-b243-c95434bf0323">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>
